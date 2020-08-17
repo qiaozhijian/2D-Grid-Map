@@ -31,3 +31,5 @@ bin/*
 *.app
 
 
+cmake-build-release/
+cmake-build-*/
