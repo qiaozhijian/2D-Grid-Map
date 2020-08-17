@@ -1,4 +1,4 @@
-# Install script for directory: /media/qzj/Software/code/octomap_tutor/src
+# Install script for directory: /media/qzj/Software/code/octomap_robot/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

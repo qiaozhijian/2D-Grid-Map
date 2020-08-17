@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <assert.h>
-
+#include "handlePCL.h"
 //pcl
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
@@ -32,17 +32,19 @@ int main( int argc, char** argv )
     resolution = 0.1;
 
     string input_file = argv[2], output_file = argv[3];
-    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud;
-    pcl::io::loadPCDFile<pcl::PointXYZRGBA> ( input_file, *cloud );
+    pcl::PointCloud<PointType>::Ptr cloud;
+    pcl::io::loadPCDFile<PointType> ( input_file, *cloud );
     cout<<"point cloud loaded, piont size = "<<cloud->points.size()<<endl;
 
-    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr StatisticFilteredCloud(new pcl::PointCloud<pcl::PointXYZRGBA>());
-    pcl::StatisticalOutlierRemoval<pcl::PointXYZRGBA> statistical;
+    pcl::PointCloud<PointType>::Ptr StatisticFilteredCloud(new pcl::PointCloud<PointType>());
+    pcl::StatisticalOutlierRemoval<PointType> statistical;
     statistical.setInputCloud(cloud);
     statistical.setMeanK(100);                                  //取平均值的临近点数
     statistical.setStddevMulThresh(1);                         //设置判断是否为离群点的阀值
     statistical.filter(*StatisticFilteredCloud);
 
+    pcl::PointCloud<PointType>::Ptr projectedCloud(new pcl::PointCloud<PointType>());
+    projectPCL(StatisticFilteredCloud, projectedCloud);
 
     //声明octomap变量
     cout<<"copy data into octomap..."<<endl;

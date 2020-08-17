@@ -48,10 +48,10 @@ RM = /media/qzj/Software/ubuntu_downloads/software/CLion-2019.3.5/clion-2019.3.5
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/qzj/Software/code/octomap_tutor
+CMAKE_SOURCE_DIR = /media/qzj/Software/code/octomap_robot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/qzj/Software/code/octomap_tutor/cmake-build-release
+CMAKE_BINARY_DIR = /media/qzj/Software/code/octomap_robot/cmake-build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/qzj/Software/code/octomap_tutor/cmake-build-release/CMakeFiles /media/qzj/Software/code/octomap_tutor/cmake-build-release/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/qzj/Software/code/octomap_robot/cmake-build-release/CMakeFiles /media/qzj/Software/code/octomap_robot/cmake-build-release/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/qzj/Software/code/octomap_tutor/cmake-build-release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/qzj/Software/code/octomap_robot/cmake-build-release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -120,21 +120,8 @@ joinmap: cmake_check_build_system
 
 # fast build rule for target.
 joinmap/fast:
-	$(MAKE) -f src/CMakeFiles/joinmap.dir/build.make src/CMakeFiles/joinmap.dir/build
+	$(MAKE) -f CMakeFiles/joinmap.dir/build.make CMakeFiles/joinmap.dir/build
 .PHONY : joinmap/fast
-
-#=============================================================================
-# Target rules for targets named pcd2octomap
-
-# Build rule for target.
-pcd2octomap: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcd2octomap
-.PHONY : pcd2octomap
-
-# fast build rule for target.
-pcd2octomap/fast:
-	$(MAKE) -f src/CMakeFiles/pcd2octomap.dir/build.make src/CMakeFiles/pcd2octomap.dir/build
-.PHONY : pcd2octomap/fast
 
 #=============================================================================
 # Target rules for targets named pcd2colorOctomap
@@ -146,8 +133,142 @@ pcd2colorOctomap: cmake_check_build_system
 
 # fast build rule for target.
 pcd2colorOctomap/fast:
-	$(MAKE) -f src/CMakeFiles/pcd2colorOctomap.dir/build.make src/CMakeFiles/pcd2colorOctomap.dir/build
+	$(MAKE) -f CMakeFiles/pcd2colorOctomap.dir/build.make CMakeFiles/pcd2colorOctomap.dir/build
 .PHONY : pcd2colorOctomap/fast
+
+#=============================================================================
+# Target rules for targets named my_util
+
+# Build rule for target.
+my_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_util
+.PHONY : my_util
+
+# fast build rule for target.
+my_util/fast:
+	$(MAKE) -f CMakeFiles/my_util.dir/build.make CMakeFiles/my_util.dir/build
+.PHONY : my_util/fast
+
+#=============================================================================
+# Target rules for targets named pcd2octomap
+
+# Build rule for target.
+pcd2octomap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcd2octomap
+.PHONY : pcd2octomap
+
+# fast build rule for target.
+pcd2octomap/fast:
+	$(MAKE) -f CMakeFiles/pcd2octomap.dir/build.make CMakeFiles/pcd2octomap.dir/build
+.PHONY : pcd2octomap/fast
+
+joinMap.o: joinMap.cpp.o
+
+.PHONY : joinMap.o
+
+# target to build an object file
+joinMap.cpp.o:
+	$(MAKE) -f CMakeFiles/joinmap.dir/build.make CMakeFiles/joinmap.dir/joinMap.cpp.o
+.PHONY : joinMap.cpp.o
+
+joinMap.i: joinMap.cpp.i
+
+.PHONY : joinMap.i
+
+# target to preprocess a source file
+joinMap.cpp.i:
+	$(MAKE) -f CMakeFiles/joinmap.dir/build.make CMakeFiles/joinmap.dir/joinMap.cpp.i
+.PHONY : joinMap.cpp.i
+
+joinMap.s: joinMap.cpp.s
+
+.PHONY : joinMap.s
+
+# target to generate assembly for a file
+joinMap.cpp.s:
+	$(MAKE) -f CMakeFiles/joinmap.dir/build.make CMakeFiles/joinmap.dir/joinMap.cpp.s
+.PHONY : joinMap.cpp.s
+
+pcd2colorOctomap.o: pcd2colorOctomap.cpp.o
+
+.PHONY : pcd2colorOctomap.o
+
+# target to build an object file
+pcd2colorOctomap.cpp.o:
+	$(MAKE) -f CMakeFiles/pcd2colorOctomap.dir/build.make CMakeFiles/pcd2colorOctomap.dir/pcd2colorOctomap.cpp.o
+.PHONY : pcd2colorOctomap.cpp.o
+
+pcd2colorOctomap.i: pcd2colorOctomap.cpp.i
+
+.PHONY : pcd2colorOctomap.i
+
+# target to preprocess a source file
+pcd2colorOctomap.cpp.i:
+	$(MAKE) -f CMakeFiles/pcd2colorOctomap.dir/build.make CMakeFiles/pcd2colorOctomap.dir/pcd2colorOctomap.cpp.i
+.PHONY : pcd2colorOctomap.cpp.i
+
+pcd2colorOctomap.s: pcd2colorOctomap.cpp.s
+
+.PHONY : pcd2colorOctomap.s
+
+# target to generate assembly for a file
+pcd2colorOctomap.cpp.s:
+	$(MAKE) -f CMakeFiles/pcd2colorOctomap.dir/build.make CMakeFiles/pcd2colorOctomap.dir/pcd2colorOctomap.cpp.s
+.PHONY : pcd2colorOctomap.cpp.s
+
+pcd2octomap.o: pcd2octomap.cpp.o
+
+.PHONY : pcd2octomap.o
+
+# target to build an object file
+pcd2octomap.cpp.o:
+	$(MAKE) -f CMakeFiles/pcd2octomap.dir/build.make CMakeFiles/pcd2octomap.dir/pcd2octomap.cpp.o
+.PHONY : pcd2octomap.cpp.o
+
+pcd2octomap.i: pcd2octomap.cpp.i
+
+.PHONY : pcd2octomap.i
+
+# target to preprocess a source file
+pcd2octomap.cpp.i:
+	$(MAKE) -f CMakeFiles/pcd2octomap.dir/build.make CMakeFiles/pcd2octomap.dir/pcd2octomap.cpp.i
+.PHONY : pcd2octomap.cpp.i
+
+pcd2octomap.s: pcd2octomap.cpp.s
+
+.PHONY : pcd2octomap.s
+
+# target to generate assembly for a file
+pcd2octomap.cpp.s:
+	$(MAKE) -f CMakeFiles/pcd2octomap.dir/build.make CMakeFiles/pcd2octomap.dir/pcd2octomap.cpp.s
+.PHONY : pcd2octomap.cpp.s
+
+src/handlePCL.o: src/handlePCL.cpp.o
+
+.PHONY : src/handlePCL.o
+
+# target to build an object file
+src/handlePCL.cpp.o:
+	$(MAKE) -f CMakeFiles/my_util.dir/build.make CMakeFiles/my_util.dir/src/handlePCL.cpp.o
+.PHONY : src/handlePCL.cpp.o
+
+src/handlePCL.i: src/handlePCL.cpp.i
+
+.PHONY : src/handlePCL.i
+
+# target to preprocess a source file
+src/handlePCL.cpp.i:
+	$(MAKE) -f CMakeFiles/my_util.dir/build.make CMakeFiles/my_util.dir/src/handlePCL.cpp.i
+.PHONY : src/handlePCL.cpp.i
+
+src/handlePCL.s: src/handlePCL.cpp.s
+
+.PHONY : src/handlePCL.s
+
+# target to generate assembly for a file
+src/handlePCL.cpp.s:
+	$(MAKE) -f CMakeFiles/my_util.dir/build.make CMakeFiles/my_util.dir/src/handlePCL.cpp.s
+.PHONY : src/handlePCL.cpp.s
 
 # Help Target
 help:
@@ -156,10 +277,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... joinmap"
-	@echo "... pcd2octomap"
+	@echo "... edit_cache"
 	@echo "... pcd2colorOctomap"
+	@echo "... my_util"
+	@echo "... pcd2octomap"
+	@echo "... joinMap.o"
+	@echo "... joinMap.i"
+	@echo "... joinMap.s"
+	@echo "... pcd2colorOctomap.o"
+	@echo "... pcd2colorOctomap.i"
+	@echo "... pcd2colorOctomap.s"
+	@echo "... pcd2octomap.o"
+	@echo "... pcd2octomap.i"
+	@echo "... pcd2octomap.s"
+	@echo "... src/handlePCL.o"
+	@echo "... src/handlePCL.i"
+	@echo "... src/handlePCL.s"
 .PHONY : help
 
 

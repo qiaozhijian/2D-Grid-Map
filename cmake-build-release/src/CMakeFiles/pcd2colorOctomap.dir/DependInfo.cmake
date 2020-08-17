@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/media/qzj/Software/code/octomap_tutor/src/pcd2colorOctomap.cpp" "/media/qzj/Software/code/octomap_tutor/cmake-build-release/src/CMakeFiles/pcd2colorOctomap.dir/pcd2colorOctomap.cpp.o"
+  "/media/qzj/Software/code/octomap_robot/src/pcd2colorOctomap.cpp" "/media/qzj/Software/code/octomap_robot/cmake-build-release/src/CMakeFiles/pcd2colorOctomap.dir/pcd2colorOctomap.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -54,6 +54,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/openni2"
   "/opt/ensenso/development/c/include"
   "/media/qzj/Software/code/octomap/octomap/include"
+  "../"
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"

@@ -48,10 +48,10 @@ RM = /media/qzj/Software/ubuntu_downloads/software/CLion-2019.3.5/clion-2019.3.5
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/qzj/Software/code/octomap_tutor
+CMAKE_SOURCE_DIR = /media/qzj/Software/code/octomap_robot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/qzj/Software/code/octomap_tutor/cmake-build-release
+CMAKE_BINARY_DIR = /media/qzj/Software/code/octomap_robot/cmake-build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(CMAKE_COMMAND) -E cmake_progress_start /media/qzj/Software/code/octomap_tutor/cmake-build-release/CMakeFiles /media/qzj/Software/code/octomap_tutor/cmake-build-release/src/CMakeFiles/progress.marks
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/qzj/Software/code/octomap_tutor/cmake-build-release/CMakeFiles 0
+	cd /media/qzj/Software/code/octomap_robot/cmake-build-release && $(CMAKE_COMMAND) -E cmake_progress_start /media/qzj/Software/code/octomap_robot/cmake-build-release/CMakeFiles /media/qzj/Software/code/octomap_robot/cmake-build-release/src/CMakeFiles/progress.marks
+	cd /media/qzj/Software/code/octomap_robot/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/qzj/Software/code/octomap_robot/cmake-build-release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /media/qzj/Software/code/octomap_robot/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,144 +97,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /media/qzj/Software/code/octomap_robot/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /media/qzj/Software/code/octomap_robot/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /media/qzj/Software/code/octomap_robot/cmake-build-release && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-src/CMakeFiles/joinmap.dir/rule:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/joinmap.dir/rule
-.PHONY : src/CMakeFiles/joinmap.dir/rule
-
-# Convenience name for target.
-joinmap: src/CMakeFiles/joinmap.dir/rule
-
-.PHONY : joinmap
-
-# fast build rule for target.
-joinmap/fast:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/joinmap.dir/build.make src/CMakeFiles/joinmap.dir/build
-.PHONY : joinmap/fast
-
-# Convenience name for target.
-src/CMakeFiles/pcd2octomap.dir/rule:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/pcd2octomap.dir/rule
-.PHONY : src/CMakeFiles/pcd2octomap.dir/rule
-
-# Convenience name for target.
-pcd2octomap: src/CMakeFiles/pcd2octomap.dir/rule
-
-.PHONY : pcd2octomap
-
-# fast build rule for target.
-pcd2octomap/fast:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/pcd2octomap.dir/build.make src/CMakeFiles/pcd2octomap.dir/build
-.PHONY : pcd2octomap/fast
-
-# Convenience name for target.
-src/CMakeFiles/pcd2colorOctomap.dir/rule:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/pcd2colorOctomap.dir/rule
-.PHONY : src/CMakeFiles/pcd2colorOctomap.dir/rule
-
-# Convenience name for target.
-pcd2colorOctomap: src/CMakeFiles/pcd2colorOctomap.dir/rule
-
-.PHONY : pcd2colorOctomap
-
-# fast build rule for target.
-pcd2colorOctomap/fast:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/pcd2colorOctomap.dir/build.make src/CMakeFiles/pcd2colorOctomap.dir/build
-.PHONY : pcd2colorOctomap/fast
-
-joinMap.o: joinMap.cpp.o
-
-.PHONY : joinMap.o
-
-# target to build an object file
-joinMap.cpp.o:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/joinmap.dir/build.make src/CMakeFiles/joinmap.dir/joinMap.cpp.o
-.PHONY : joinMap.cpp.o
-
-joinMap.i: joinMap.cpp.i
-
-.PHONY : joinMap.i
-
-# target to preprocess a source file
-joinMap.cpp.i:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/joinmap.dir/build.make src/CMakeFiles/joinmap.dir/joinMap.cpp.i
-.PHONY : joinMap.cpp.i
-
-joinMap.s: joinMap.cpp.s
-
-.PHONY : joinMap.s
-
-# target to generate assembly for a file
-joinMap.cpp.s:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/joinmap.dir/build.make src/CMakeFiles/joinmap.dir/joinMap.cpp.s
-.PHONY : joinMap.cpp.s
-
-pcd2colorOctomap.o: pcd2colorOctomap.cpp.o
-
-.PHONY : pcd2colorOctomap.o
-
-# target to build an object file
-pcd2colorOctomap.cpp.o:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/pcd2colorOctomap.dir/build.make src/CMakeFiles/pcd2colorOctomap.dir/pcd2colorOctomap.cpp.o
-.PHONY : pcd2colorOctomap.cpp.o
-
-pcd2colorOctomap.i: pcd2colorOctomap.cpp.i
-
-.PHONY : pcd2colorOctomap.i
-
-# target to preprocess a source file
-pcd2colorOctomap.cpp.i:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/pcd2colorOctomap.dir/build.make src/CMakeFiles/pcd2colorOctomap.dir/pcd2colorOctomap.cpp.i
-.PHONY : pcd2colorOctomap.cpp.i
-
-pcd2colorOctomap.s: pcd2colorOctomap.cpp.s
-
-.PHONY : pcd2colorOctomap.s
-
-# target to generate assembly for a file
-pcd2colorOctomap.cpp.s:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/pcd2colorOctomap.dir/build.make src/CMakeFiles/pcd2colorOctomap.dir/pcd2colorOctomap.cpp.s
-.PHONY : pcd2colorOctomap.cpp.s
-
-pcd2octomap.o: pcd2octomap.cpp.o
-
-.PHONY : pcd2octomap.o
-
-# target to build an object file
-pcd2octomap.cpp.o:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/pcd2octomap.dir/build.make src/CMakeFiles/pcd2octomap.dir/pcd2octomap.cpp.o
-.PHONY : pcd2octomap.cpp.o
-
-pcd2octomap.i: pcd2octomap.cpp.i
-
-.PHONY : pcd2octomap.i
-
-# target to preprocess a source file
-pcd2octomap.cpp.i:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/pcd2octomap.dir/build.make src/CMakeFiles/pcd2octomap.dir/pcd2octomap.cpp.i
-.PHONY : pcd2octomap.cpp.i
-
-pcd2octomap.s: pcd2octomap.cpp.s
-
-.PHONY : pcd2octomap.s
-
-# target to generate assembly for a file
-pcd2octomap.cpp.s:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(MAKE) -f src/CMakeFiles/pcd2octomap.dir/build.make src/CMakeFiles/pcd2octomap.dir/pcd2octomap.cpp.s
-.PHONY : pcd2octomap.cpp.s
 
 # Help Target
 help:
@@ -243,19 +117,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... joinmap"
-	@echo "... pcd2octomap"
 	@echo "... edit_cache"
-	@echo "... pcd2colorOctomap"
-	@echo "... joinMap.o"
-	@echo "... joinMap.i"
-	@echo "... joinMap.s"
-	@echo "... pcd2colorOctomap.o"
-	@echo "... pcd2colorOctomap.i"
-	@echo "... pcd2colorOctomap.s"
-	@echo "... pcd2octomap.o"
-	@echo "... pcd2octomap.i"
-	@echo "... pcd2octomap.s"
 .PHONY : help
 
 
@@ -267,6 +129,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /media/qzj/Software/code/octomap_tutor/cmake-build-release && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /media/qzj/Software/code/octomap_robot/cmake-build-release && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
