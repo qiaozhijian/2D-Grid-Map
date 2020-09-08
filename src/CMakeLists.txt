@@ -1,4 +1,0 @@
-# 增加PCL库的依赖
-#FIND_PACKAGE( PCL REQUIRED COMPONENTS common io )
-
-
