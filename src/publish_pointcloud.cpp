@@ -39,19 +39,27 @@ int main(int argc, char **argv) {
     pcl::PointCloud<PointType> cloud;
     pcl::io::loadPCDFile(path, cloud);
 
-    pcl::PointCloud<PointType>::Ptr StatisticFilteredCloud(new pcl::PointCloud<PointType>());
-    pcl::StatisticalOutlierRemoval<PointType> statistical;
-    statistical.setInputCloud(static_cast<pcl::PointCloud<PointType>::Ptr>(&cloud));
-    statistical.setMeanK(10);                                  //取平均值的临近点数
-    statistical.setStddevMulThresh(1);                         //设置判断是否为离群点的阀值
-    statistical.filter(*StatisticFilteredCloud);
-    pcl::copyPointCloud(*StatisticFilteredCloud,cloud);
+//    pcl::PointCloud<PointType>::Ptr StatisticFilteredCloud(new pcl::PointCloud<PointType>());
+//    pcl::StatisticalOutlierRemoval<PointType> statistical;
+//    statistical.setInputCloud(static_cast<pcl::PointCloud<PointType>::Ptr>(&cloud));
+//    statistical.setMeanK(200);                                  //取平均值的临近点数
+//    statistical.setStddevMulThresh(1);                         //设置判断是否为离群点的阀值
+//    statistical.filter(*StatisticFilteredCloud);
+//    pcl::copyPointCloud(*StatisticFilteredCloud,cloud);
+
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_after_Radius(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::RadiusOutlierRemoval<pcl::PointXYZ> radiusoutlier;  //创建滤波器
+    radiusoutlier.setInputCloud(static_cast<pcl::PointCloud<PointType>::Ptr>(&cloud));    //设置输入点云
+    radiusoutlier.setRadiusSearch(0.1);     //设置半径为100的范围内找临近点
+    radiusoutlier.setMinNeighborsInRadius(3); //设置查询点的邻域点集数小于
+    radiusoutlier.filter(*cloud_after_Radius);
+    pcl::copyPointCloud(*cloud_after_Radius,cloud);
 
     pcl::PointCloud<PointType>::Ptr RomoveGround(new pcl::PointCloud<PointType>());
     pcl::PassThrough<PointType> ptfilter (true); // Initializing with true will allow us to extract the removed indices
     ptfilter.setInputCloud (static_cast<pcl::PointCloud<PointType>::Ptr>(&cloud));
     ptfilter.setFilterFieldName ("y");
-    ptfilter.setFilterLimits (-0.01, 1000.0);
+    ptfilter.setFilterLimits (0.1, 1000.0);
     ptfilter.setNegative(true);
     ptfilter.filter (*RomoveGround);
     pcl::copyPointCloud(*RomoveGround,cloud);
